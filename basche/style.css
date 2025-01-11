@@ -1,0 +1,305 @@
+@font-face {
+    font-family: fontulMeu;
+    src: url(roboto.ttf);
+}
+
+body{
+    background-color: black;
+    color: blanchedalmond;
+    font-family: fontulMeu;
+}
+
+header{
+    display: grid;
+    /* align-items: flex-start;
+    justify-content: space-between; */
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 8vw 1fr;
+    margin-top: 3vh;
+    margin-left: 1em;
+    margin-right: 1em;  
+    padding-top: 2em;  
+}
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 8vw;
+    align-items: center;
+    font-size: 2vw;
+}
+
+nav a{
+    text-decoration: underline;
+    color: blanchedalmond;
+    font-family: fontulMeu;
+}
+
+
+a:hover{
+    opacity: 0.7;
+}
+
+
+button{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: blanchedalmond;
+    font-size: 2vw;
+    font-family: fontulMeu;
+    padding: 0;
+}
+#sus{
+    display: flex;
+    height: inherit;
+    align-items: flex-start;
+    flex-direction: row;
+    font-family: fontulMeu;
+    font-size: 6vw;
+    position: relative;
+    transform-origin: top left;
+    transform: rotate(30deg);
+    animation-name: nume;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: one;
+    animation-fill-mode: forwards;
+    
+}
+
+.letter{
+    display: inline-block;
+    width: 6%;
+    animation-name: afisare;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+
+}
+
+
+#space{
+    display: block;
+    height: 2em;
+    width: 0.5em;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+
+}
+
+span{
+
+    display: none;
+    text-align: left;
+    transition: all 2s;
+}
+
+span ul{
+    border-left: 0.2em blanchedalmond solid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li a{
+    text-decoration:underline;
+}
+
+#menu:hover span{
+
+    display: inline;
+    margin:0;
+    padding: 0;
+    position: absolute;
+    margin-top: 5vw;
+}
+
+#menu:focus span{
+
+    display: inline;
+    margin:0;
+    padding: 0;
+    position: absolute;
+    margin-top: 5vw;
+}
+
+main{
+    margin-top: 10vh;
+    margin-left: 3vw;
+    display: block;
+    width: 45vw;
+}
+
+main p{
+    font-size: 3vw;
+}
+ul li{
+    margin-bottom: 2vw;
+}
+
+
+
+
+@keyframes afisare {
+    0%{
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    20%{
+        display: flex;
+        opacity: 0.1;
+    }
+    40%{
+        opacity: 0.3;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes nume{
+    0%{
+        transform: rotate(30deg);
+        .letter{
+            display:none;
+        }
+    }
+
+    100%{
+        .letter{
+            display: inline;
+        }
+        transform: rotate(-30deg);
+        transform: translate(calc(var(--scale) * 100px), 0px);
+    }
+}
+
+@media (max-width: 450px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #sus{
+        justify-content: center;
+        width: 84vw;
+        height: 70%;
+        font-size: 10vw;
+
+    }
+
+
+    nav{
+        display: flex;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 6vh;
+        width: 100vw;
+        font-size: 5vw;
+        justify-content: space-around;
+        
+    }
+
+    button{
+        font-size: 5vw;
+    }
+
+    span ul{
+        margin-top: 6vw;
+    }
+    body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        width: 80vw;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    main p{
+        font-size: 6.5vw;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 451px) {
+    /* #sus{
+        margin-left: 3vw;
+    }
+
+    body{
+        margin-left: 0;
+    }
+    main{
+        width: 90vw;
+        text-align: center;
+    }
+
+    main p{
+        font-size: 5vw;
+    }
+} */
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #sus{
+        justify-content: center;
+        width: 84vw;
+        height: 70%;
+        font-size: 10vw;
+
+
+    }
+
+
+    nav{
+        margin-top: 0;
+        margin-right: 0;
+        width: 90vw;
+        font-size: 3.7vw;
+    }
+
+    button{
+        font-size: 3.7vw;
+    }
+
+    span ul{
+        margin-top: 4vw;
+    }
+
+    body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main{
+        margin-left: 0;
+        margin-top: 20vw;
+        width: 80vw;
+        text-align: center;
+    }
+
+    main p{
+        font-size: 6.5vw;
+    }
+}
