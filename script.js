@@ -88,52 +88,65 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        console.log("Formularul a fost trimis!"); // Mesaj pentru a verifica trimiterea formularului
+        console.log("Formularul a fost trimis!"); 
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Validare email
-        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/; // Parola: 1 literă mare, 1 cifră, minim 8 caractere
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+        const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/; 
 
-        // Validare email
         if (!emailRegex.test(emailInput.value)) {
-            console.log("Email invalid:", emailInput.value); // Afișează emailul invalid
+            console.log("Email invalid:", emailInput.value); 
             message.textContent = "Email invalid!";
             return;
         }
 
-        // Validare parolă
         if (!passwordRegex.test(passwordInput.value)) {
-            console.log("Parolă invalidă:", passwordInput.value); // Afișează parola invalidă
+            console.log("Parolă invalidă:", passwordInput.value); 
             message.textContent = "Parola trebuie să conțină minim 8 caractere, o literă mare și o cifră!";
             return;
         }
-
-        // Verificare utilizator în localStorage
         const users = JSON.parse(localStorage.getItem("users")) || [];
-        console.log("Utilizatori salvați în localStorage:", users); // Afișează lista de utilizatori
+
+
+        console.log("Utilizatori salvați în localStorage:", users); 
 
         const user = users.find(
             (user) => user.email === emailInput.value && user.password === passwordInput.value
         );
 
         if (!user) {
-            console.log("Utilizatorul nu a fost găsit:", emailInput.value); // Mesaj pentru utilizator inexistent
+            console.log("Utilizatorul nu a fost găsit:", emailInput.value); 
             message.textContent = "Email sau parolă incorectă!";
             return;
         }
 
-        console.log("Utilizator validat cu succes:", user); // Mesaj pentru utilizator valid
+        console.log("Utilizator validat cu succes:", user); 
 
-        // Mesaj de succes
         message.style.color = "green";
         message.textContent = "Datele au fost validate cu succes!";
+        setTimeout(() => {
+            message.textContent = ""; 
+        }, 3000);
 
-        // Resetăm formularul
+
         form.reset();
 
-        // Afișăm secțiunea protejată
         protectedSection.classList.remove("hidden");
         console.log("Display style al secțiunii protejate:", window.getComputedStyle(protectedSection).display);
 
-        console.log("Secțiunea protejată a fost afișată."); // Confirmare pentru afișarea secțiunii
+        console.log("Secțiunea protejată a fost afișată."); 
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const showStylesButton = document.getElementById("show-styles");
+    const stylesOutput = document.getElementById("styles-output");
+    const title = document.querySelector("h1");
+    console.log(title);
+
+    showStylesButton.addEventListener("click", () => {
+        const computedStyles = window.getComputedStyle(title);
+        stylesOutput.textContent = `Culoare: ${computedStyles.color}, Font: ${computedStyles.fontFamily}, Dimensiune font: ${computedStyles.fontSize}`;
+        console.log("Stilurile titlului:", computedStyles);
+    });
+});
+    

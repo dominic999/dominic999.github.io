@@ -243,6 +243,29 @@ ul li{
     text-align: center;
 }
 
+#show-styles {
+    display: block;
+    margin: 20px auto; /* Centrează butonul în pagină */
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#styles-output {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: blanchedalmond;
+}
+
+#numeFormular{
+    text-align: center;
+}
 
 
 @keyframes afisare {
