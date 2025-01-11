@@ -146,6 +146,103 @@ ul li{
 }
 
 
+/* Formular de contact */
+#contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid blanchedalmond;
+    background-color: black;
+    color: blanchedalmond;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto; /* Centrează formularul */
+}
+
+#contact-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid blanchedalmond;
+    background-color: #222;
+    color: white;
+    border-radius: 3px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#form-message {
+    font-size: 0.9rem;
+    color: red;
+    text-align: center;
+}
+
+/* Secțiunea protejată */
+#protected-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #222;
+    color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Formular de înregistrare */
+#register-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid blanchedalmond;
+    background-color: black;
+    color: blanchedalmond;
+    border-radius: 5px;
+    width: 300px;
+    margin: 0 auto; /* Centrează formularul */
+}
+
+#register-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid blanchedalmond;
+    background-color: #222;
+    color: white;
+    border-radius: 3px;
+}
+
+#register-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#register-message {
+    font-size: 0.9rem;
+    color: red;
+    text-align: center;
+}
+
 
 
 @keyframes afisare {

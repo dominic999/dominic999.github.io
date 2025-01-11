@@ -14,8 +14,13 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #menu-back{
@@ -105,6 +110,115 @@ main p{
     transform: rotateY(180deg);
 }
 
+#dropdown-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+#toggle-dropdown {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+    cursor: pointer;
+    text-align: center;
+}
+
+#dropdown-menu {
+    margin-top: 10px;
+    background-color: black;
+    color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
+    width: 300px;
+    display: none; 
+}
+
+#menu-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#menu-items li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+}
+
+#menu-items li button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+#new-item {
+    flex-grow: 1;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid blanchedalmond;
+    background-color: black;
+    color: blanchedalmond;
+}
+
+#add-item {
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+#toggle-banner {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: black;
+    color: blanchedalmond;
+    border: 1px solid blanchedalmond;
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+#banner {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #333; 
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.5s ease; 
+    display: none; 
+}
+
+.hidden {
+    display: none;
+}
 
 
 @media (max-width: 760px){

@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Personal Website</title>
-    <script src="code.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div id = "sus">
+        <div id="sus">
             <div>Ț</div>
-            <div class = "letter">Î</div>
-            <div class = "letter" data-scale = "1">R</div>
-            <div class = "letter" data-scale = "2">D</div>
-            <div class = "letter" data-scale = "3">E</div>
-            <div class = "letter" data-scale = "4">A</div>
+            <div class="letter">Î</div>
+            <div class="letter" data-scale="1">R</div>
+            <div class="letter" data-scale="2">D</div>
+            <div class="letter" data-scale="3">E</div>
+            <div class="letter" data-scale="4">A</div>
             <div id="space"></div>
-            <div class = "letter" data-scale = "5">D</div>
-            <div class = "letter" data-scale = "6">O</div>
-            <div class = "letter" data-scale = "7">M</div>
-            <div class = "letter" data-scale = "8">I</div>
-            <div class = "letter" data-scale = "9">N</div>
-            <div class = "letter" data-scale = "9">I</div>
-            <div class = "letter" data-scale = "10">C</div>
+            <div class="letter" data-scale="5">D</div>
+            <div class="letter" data-scale="6">O</div>
+            <div class="letter" data-scale="7">M</div>
+            <div class="letter" data-scale="8">I</div>
+            <div class="letter" data-scale="9">N</div>
+            <div class="letter" data-scale="10">C</div>
         </div>
         <nav>
-            <button id="menu"><a>Pasiuniˆ</a>
-                <span id = "lista">
+            <button id="menu">
+                <a>Pasiuni</a>
+                <span id="lista">
                     <ul>
                         <li><a href="baschet.html">Baschet</a></li>
                         <li><a href="programare.html">Programare</a></li>
@@ -37,13 +37,33 @@
             </button>
             <a href="educatie.html">Educatie</a> 
         </nav>
-           
     </header>
 
-
     <main>
-        <p>Numele meu este Dominic. Am 19 ani si sunt student in anul I la "Facultatea de matematica si informatica" din cadrul Universitatii Bucuresti.</p>
+        <p>Numele meu este Dominic. Am 19 ani și sunt student în anul I la "Facultatea de Matematică și Informatică" din cadrul Universității București.</p>
     </main>
+    <form id="contact-form">
+        <h2>Contactează-ne</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Introdu adresa de email" required>
+        <label for="password">Parolă:</label>
+        <input type="password" id="password" placeholder="Introdu parola" required>
+        <button type="submit">Trimite</button>
+        <p id="form-message"></p>
+    </form>
+    <div id="protected-section" class="hidden">
+        <h2>Secțiune Protejată</h2>
+        <p>Felicitări! Ai accesat o secțiune exclusivă a site-ului. Datele tale au fost validate cu succes!</p>
+    </div>
+    <form id="register-form">
+        <h2>Înregistrează un cont</h2>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" placeholder="Introdu emailul" required>
+        <label for="register-password">Parolă:</label>
+        <input type="password" id="register-password" placeholder="Introdu parola" required>
+        <button type="submit">Înregistrează</button>
+        <p id="register-message"></p>
+    </form>
 
 </body>
 </html>
